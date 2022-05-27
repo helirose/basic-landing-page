@@ -1,0 +1,14 @@
+{
+  "name": "business-temp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charlotte Rees",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.52.1"
+  }
+}

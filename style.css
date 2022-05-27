@@ -1,0 +1,120 @@
+@font-face {
+    font-family: akshar;
+    src: url(Akshar-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: dancingscript;
+    src: url(DancingScript-VariableFont_wght.ttf);
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: akshar, sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(55deg, rgba(2,0,36,1) 0%, rgba(1,120,125,1) 76%, rgba(0,182,162,1) 100%); 
+}
+
+#container {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+}
+
+.background-animation {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(255,255,255,0.5);
+    animation-name: background-effect;
+    animation-duration: 10s;
+}
+
+main {
+    width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: rgb(255,255,255);
+}
+
+a {
+    color: rgb(0,255,226);
+}
+
+h1 {
+    font-family: dancingscript, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem 0 2rem 0;
+}
+
+p {
+    font-weight: lighter;
+    line-height: 1.75rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.3rem;
+    text-align: left;
+    margin: 0 0 1rem 0;
+}
+
+@keyframes background-effect {
+    0% {background-color: rgba(255,255,255,0.1)}
+    50% {background-color: rgba(255,255,255,0.5)}
+    100% {background-color: rgba(255,255,255,0.1)}
+}
+
+/* 
+* Mid mobile beyond glass effect
+*/
+@media only screen and (min-width: 380px) {
+    main {
+        width: 90%;
+        margin: 1rem auto;
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.1);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 5px 5px 10px 0px rgba(2,0,36,0.6);
+        -moz-box-shadow: 5px 5px 10px 0px rgba(2,0,36,0.6);
+        box-shadow: 5px 5px 10px 0px rgba(2,0,36,0.6);
+    }
+}
+
+/* 
+* Medium to large mobile device screens
+*/
+@media only screen and (min-width: 600px) {
+    main {
+        width: 60%;
+        padding: 2rem;
+}
+
+/*
+* Large laptop/Standard monitor
+*/
+@media only screen and (min-width: 901px) {
+    main {
+        width: 40%;
+    }
+
+}
+
+/*
+* Large monitor/TV
+*/
+@media only screen and (min-width: 1441px) {
+    main {
+        width: 30%;
+    }
+
+}
