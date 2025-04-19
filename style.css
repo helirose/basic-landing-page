@@ -481,12 +481,13 @@ footer {
     }
 
     .carousel a {
-        position: relative;
+        position: static;
         display: block;
         width: 100%;
     }
 
     .carousel a img {
+        position: static;
         display: block;
         width: 100%;
     }
