@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const stickyNav = document.getElementById("sticky-nav");
+
     window.addEventListener("scroll", function () {
-        const stickyNav = document.getElementById("sticky-nav");
-        if (window.scrollY > 100) {
+        if (window.scrollY > 75) {
             stickyNav.classList.add("sticky");
         } else {
             stickyNav.classList.remove("sticky");
@@ -13,5 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     burgerBtn.addEventListener("click", () => {
         jumpLinks.classList.toggle("active");
+        burgerBtn.classList.toggle("active");
+        stickyNav.classList.toggle("active");
+        jumpLinks.style.top = stickyNav.offsetHeight + "px";
+    });
+
+    jumpLinks.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") {
+            jumpLinks.classList.remove("active");
+            burgerBtn.classList.remove("active");
+            stickyNav.classList.remove("active");
+        }
     });
 });

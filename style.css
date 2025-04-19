@@ -146,7 +146,8 @@ p {
     flex-wrap: wrap;
 }
 
-.card.wide h3 {
+.card.wide h3,
+.card.contact h3 {
     margin: 0;
     text-align: left;
 }
@@ -328,6 +329,7 @@ footer {
 }
 
 .burger {
+    height: 35px;
     display: none;
     outline: none;
     border: none;
@@ -338,37 +340,48 @@ footer {
     cursor: pointer;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
 .jump-links a {
     display: inline-block;
     transition: none;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out,
-        fill 0.3s ease-in-out;
-    animation-duration: 2s;
+    transition: color 0.3s ease-in-out, fill 0.3s ease-in-out;
     fill: #46ffe5;
 }
 
 .jump-links a:hover {
     color: rgb(2, 0, 36);
-    animation-name: pulse;
-    animation-iteration-count: infinite;
     fill: rgb(2, 0, 36);
 }
 
-.sticky .jump-links a:hover {
+.jump-links.active a:hover {
     color: #f5fafa;
     fill: #f5fafa;
+}
+
+.burger.active .open {
+    display: none;
+}
+
+.burger .close {
+    display: none;
+}
+
+.burger.active .close {
+    display: inline-block;
+}
+
+.jump-links .mobile {
+    display: none;
+}
+
+.icon-align {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5em;
+    align-items: center;
+}
+
+.icon-align svg {
+    fill: #44697d;
 }
 
 @media screen and (max-width: 480px) {
@@ -419,6 +432,7 @@ footer {
     .jump-links.active {
         display: block;
         position: absolute;
+        width: 100%;
         top: 0;
         right: 0;
         z-index: 10;
@@ -436,5 +450,48 @@ footer {
 
     .burger {
         display: block;
+    }
+
+    .jump-links .mobile {
+        display: block;
+    }
+
+    .jump-links.active li.mobile a {
+        display: inline-block;
+        padding: 1em 0 1em 2em;
+    }
+
+    .carousel {
+        flex: 1 0 100%;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1em;
+        max-width: 100%;
+    }
+
+    .carousel a:hover {
+        transform: none;
+    }
+
+    .carousel a:nth-child(1),
+    .carousel a:nth-child(2),
+    .carousel a:nth-child(3) {
+        left: 0;
+    }
+
+    .carousel a {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .carousel a img {
+        display: block;
+        width: 100%;
+    }
+
+    #sticky-nav.active {
+        background: #020d2e;
     }
 }
