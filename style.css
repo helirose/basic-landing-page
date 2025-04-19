@@ -495,4 +495,8 @@ footer {
     #sticky-nav.active {
         background: #020d2e;
     }
+
+    .card.wide {
+        display: block;
+    }
 }
