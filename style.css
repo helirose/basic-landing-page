@@ -294,6 +294,10 @@ nav {
     text-decoration: none;
 }
 
+.inner-nav ul li a:link svg {
+    fill: #46ffe5;
+}
+
 .sticky {
     background: #020d2e;
     z-index: 10;
